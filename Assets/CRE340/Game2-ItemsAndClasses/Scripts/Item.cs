@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public string itemName;
+    public string itemDescription;
+
+    public Item() 
     {
-        
+        itemName = "Generic Item";
+        itemDescription = "A generic item";
     }
 
-    // Update is called once per frame
-    void Update()
+    public Item(string newItemName, string newitemDescription) 
     {
-        
+        itemName = newItemName;
+        itemDescription = newitemDescription;
     }
+
+    public virtual void DisplayInfo() 
+    {
+        Debug.Log($"{itemName} : {itemDescription}");
+    }
+
 }
