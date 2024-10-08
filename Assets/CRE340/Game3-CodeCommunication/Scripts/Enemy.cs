@@ -19,6 +19,8 @@ public class Enemy : MonoBehaviour, IDamagable
     public void TakeDamage(int damage) 
     { 
         health -= damage;
+
+        HealthEventManager.OnObjectDamaged?.Invoke(health);
         ShowHitEffect();
 
         if (health <= 0) 
