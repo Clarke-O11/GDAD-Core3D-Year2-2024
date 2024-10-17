@@ -29013,7 +29013,7 @@ GameObject:
   - component: {fileID: 1194643815}
   - component: {fileID: 1194643814}
   m_Layer: 0
-  m_Name: VFX Graph
+  m_Name: VFX Graph Ember
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
