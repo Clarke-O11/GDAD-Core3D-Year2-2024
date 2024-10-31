@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class EventReceiver : MonoBehaviour
 {
@@ -9,51 +7,59 @@ public class EventReceiver : MonoBehaviour
 
     private void OnEnable()
     {
-        EventSender.OnFire += HandlerFireEvent;
+        // Subscribe to the OnFire event
+        EventSender.OnFire += HandleFireEvent;
     }
 
-    private void OnDisable() 
+    private void OnDisable()
     {
-        EventSender.OnFire -= HandlerFireEvent;
+        // Unsubscribe from the OnFire event to avoid memory leaks
+        EventSender.OnFire -= HandleFireEvent;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
+        // Store the original scale of the object
         originalScale = transform.localScale;
     }
 
-    private void HandlerFireEvent(float scale, float speed) 
+    // Method that handles the OnFire event
+    private void HandleFireEvent(float scale, float speed)
     {
+        // Start a coroutine to scale the object up and back down
         StartCoroutine(ScaleObject(scale, speed));
     }
 
-    private IEnumerator ScaleObject(float targetScale, float speed) 
-    { 
+    // Coroutine to scale the object using Lerp
+    private IEnumerator ScaleObject(float targetScale, float speed)
+    {
         Vector3 targetSize = originalScale * targetScale;
         float elapsedTime = 0f;
-        float duration = 2f / speed;
+        float duration = 1f / speed; // Calculate duration based on speed
 
-        while (elapsedTime < duration) 
+        // Scale up
+        while (elapsedTime < duration)
         {
             transform.localScale = Vector3.Lerp(originalScale, targetSize, elapsedTime / duration);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
+        // Ensure the final scale is exact
         transform.localScale = targetSize;
 
+        // Reset elapsed time for scaling back
         elapsedTime = 0f;
 
-        while (elapsedTime < duration) 
+        // Scale back down
+        while (elapsedTime < duration)
         {
             transform.localScale = Vector3.Lerp(targetSize, originalScale, elapsedTime / duration);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
+        // Ensure the scale is reset to the original size
         transform.localScale = originalScale;
     }
-
-
 }
