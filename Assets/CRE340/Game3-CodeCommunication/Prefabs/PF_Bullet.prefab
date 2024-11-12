@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6854733854813930392}
   - component: {fileID: 5969629346026480172}
   - component: {fileID: 2323885144468907713}
-  - component: {fileID: -1423874609601002026}
+  - component: {fileID: 756070346506040310}
   m_Layer: 0
   m_Name: PF_Bullet
   m_TagString: Untagged
@@ -165,11 +165,11 @@ MonoBehaviour:
   destroyAfterTime: 1
   destructionTime: 8
   destroyOnCollision: 1
-  collisionDestroyThreshold: 1
-  destroyOffScreen: 1
+  collisionDestroyThreshold: 2
+  destroyOffScreen: 0
   destroyIfIdle: 0
   idleTimeThreshold: 1
---- !u!82 &-1423874609601002026
+--- !u!82 &756070346506040310
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -371,23 +371,23 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.99371064, g: 0.4974388, b: 0.25936466, a: 1}
-      key1: {r: 0.9685534, g: 0.9043825, b: 0.4294528, a: 1}
-      key2: {r: 0.99371064, g: 0.4974388, b: 0.25936466, a: 0}
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 1414
-      ctime1: 39450
-      ctime2: 5012
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
       ctime3: 0
       ctime4: 0
       ctime5: 0
       ctime6: 0
       ctime7: 0
-      atime0: 58339
+      atime0: 0
       atime1: 65535
       atime2: 0
       atime3: 0
@@ -396,7 +396,7 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: 0
+      m_ColorSpace: -1
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0

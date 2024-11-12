@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7628869257756045922}
   - component: {fileID: 9030747191467422164}
   - component: {fileID: 6020063585220888222}
-  - component: {fileID: -6748209395627110707}
+  - component: {fileID: -6718525439934205115}
   m_Layer: 0
   m_Name: PF_WeaponCollectable
   m_TagString: Untagged
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: 8736a849bb3951244b61da4a44646a8a, type: 2}
---- !u!82 &-6748209395627110707
+--- !u!82 &-6718525439934205115
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,9 +159,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 7842468050713168027, guid: 3c08029f3a334d8468cd0ea11728e603,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 2f42a0029e3262648b44c582623630ff, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c928b0ebc5e0b7940a62c0319b35c800, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
