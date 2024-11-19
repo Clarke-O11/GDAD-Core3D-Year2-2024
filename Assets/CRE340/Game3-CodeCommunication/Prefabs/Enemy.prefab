@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6643007591796646304}
   - component: {fileID: 254297637342302027}
   - component: {fileID: 5497435827614561994}
+  - component: {fileID: 2510144265339119272}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -172,6 +173,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 254297637342302027}
   m_maskType: 0
+--- !u!114 &2510144265339119272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913895355949340239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b88a7fbac2288146b32138e202f4403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMesh: {fileID: 0}
 --- !u!1 &6041641523765857172
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +201,6 @@ GameObject:
   - component: {fileID: 8213651044925504877}
   - component: {fileID: 3149809021537284936}
   - component: {fileID: 6187597631453582336}
-  - component: {fileID: 1907021448951246826}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -324,12 +337,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 16c7590885f0fcf479df9d7f69ddbd61, type: 2}
-  dieEffectPrefab: {fileID: 2266959994559975120, guid: 05b09e4a1f3b1d44bb86d2f25468b730,
-    type: 3}
   damage: 10
+  health: 10
   speed: 2
   chaseRange: 5
-  target: {fileID: 1074202321256414594}
+  target: {fileID: 0}
+  dieEffectPrefab: {fileID: 2266959994559975120, guid: 05b09e4a1f3b1d44bb86d2f25468b730,
+    type: 3}
 --- !u!82 &6187597631453582336
 AudioSource:
   m_ObjectHideFlags: 0
@@ -427,16 +441,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1907021448951246826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6041641523765857172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb84651a07a824241bf4bf520af8f415, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textMesh: {fileID: 5497435827614561994}
